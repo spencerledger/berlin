@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerusalem, New York, Berlin</title>
+    <link rel="icon" href="JNYB.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes backgroundChange {
+            0% { background-color: #f4f4f4; }
+            12.5% { background-color: #ffebee; }
+            25% { background-color: #ffe0b2; }
+            37.5% { background-color: #fff9c4; }
+            50% { background-color: #e8f5e9; }
+            62.5% { background-color: #e3f2fd; }
+            75% { background-color: #ede7f6; }
+            87.5% { background-color: #fce4ec; }
+            100% { background-color: #f4f4f4; }
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: backgroundChange 10s infinite;
+            color: #333;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            color: #2c3e50;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .lyrics {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            margin-top: 20px;
+            color: #34495e;
+            line-height: 1.8;
+        }
+
+        .audio-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(44, 62, 80, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: backgroundChange 10s infinite;
+        }
+
+        .audio-container audio {
+            width: 250px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jerusalem, New York, Berlin</h1>
+    </header>
+    <main>
+        <p>I know I loved you then</p>
+        <div class="lyrics">
+            <p>I think I love you still</p>
+            <p>But, this prophecy of ours</p>
+            <p>Has come back dressed to kill</p>
+            <p>Three stones on a mountain</p>
+            <p>Three small holes in a field</p>
+            <p>You've given me the big dream</p>
+            <p>But you can't make it real</p>
+            <br>
+            <p>O, wicked world</p>
+            <p>Just think what could have been</p>
+            <p>Jerusalem, New York, Berlin</p>
+            <br>
+            <p>All I do is lose, but baby</p>
+            <p>All I want's to win</p>
+            <p>Jerusalem, New York, Berlin</p>
+            <br>
+            <p>A hundred years or more</p>
+            <p>It feels like such a dream</p>
+            <p>An endless conversation</p>
+            <p>Since 1917</p>
+            <p>Now the battery is too hot</p>
+            <p>It's burning up in its tray</p>
+            <p>Young marriages are melting</p>
+            <p>And dying where they lay</p>
+            <br>
+            <p>O, wicked world</p>
+            <p>Just think what could have been</p>
+            <p>Jerusalem, New York, Berlin</p>
+            <br>
+            <p>All I do is lose, but baby</p>
+            <p>All I want's to win</p>
+            <p>Jerusalem, New York, Berlin</p>
+            <br>
+            <p>Our tongues will fall so still</p>
+            <p>Our teeth will all decay</p>
+            <p>A minute feels much longer</p>
+            <p>With nothing left to say</p>
+            <p>So let them win the battle</p>
+            <p>But don't let them restart</p>
+            <p>That genocidal feeling</p>
+            <p>That beats in every heart</p>
+            <br>
+            <p>O, wicked world</p>
+            <p>Just think what could have been</p>
+            <p>Jerusalem, New York, Berlin</p>
+            <br>
+            <p>All I do is lose, but baby</p>
+            <p>All I want's to win</p>
+            <p>Jerusalem, New York, Berlin</p>
+        </div>
+    </main>
+
+    <!-- Audio Player at the bottom-right corner -->
+    <div class="audio-container">
+        <audio controls>
+            <source src="JNYB.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Alternate tab title every 5 seconds
+        const titles = ["Jerusalem, New York, Berlin", "Vampire Weekend"];
+        let titleIndex = 0;
+
+        setInterval(() => {
+            document.title = titles[titleIndex];
+            titleIndex = (titleIndex + 1) % titles.length;
+        }, 2500);
+    </script>
+</body>
+</html>
